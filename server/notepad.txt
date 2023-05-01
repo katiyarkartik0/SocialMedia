@@ -1,0 +1,4 @@
+mongoDB_user = dbAccessUser
+mongoDB_pass=  0kyH1AwowfPxtGUV;
+frontEnd running on port 3000
+backEnd running on port 3001

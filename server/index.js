@@ -13,6 +13,7 @@ import {register} from "../server/controllers/auth.js";
 import authRoutes from "./routes/auth.js"
 import userRoutes from "./routes/users.js"
 import postsRoutes from "./routes/posts.js";
+import { createPost } from "./controllers/posts.js";
 
 /* CONFIGURATIONS */
 const __filename = fileURLToPath(import.meta.url);
@@ -42,7 +43,7 @@ const upload = multer({ storage });
 
 //ROUTE WITH FILES
 app.post("/auth/register",upload.single("picture"),register)
-app.post("/auth/posts",upload.single("picture"),createPosts)
+app.post("/auth/posts",upload.single("picture"),createPost)
 
 
 //ROUTES
